@@ -47,5 +47,19 @@ namespace Golfprojectfinal
                 reader.Close();
             }
         }
+
+        private void btnCount_Click(object sender, EventArgs e)
+        {
+            string connectionString = @"Data Source=BIKASH-PC\SQLEXPRESS;Initial Catalog=Golf;Integrated Security=True";
+            // a simple Scalar query just returning one value.
+            string queryString = "SELECT COUNT(ID) FROM Golf";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand Command = new SqlCommand(queryString, connection);
+                connection.Open();
+                btnCount.Text = Command.ExecuteScalar().ToString();
+                connection.Close();
+            }
+        }
     }
 }

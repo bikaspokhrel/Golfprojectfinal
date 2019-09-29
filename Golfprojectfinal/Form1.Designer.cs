@@ -40,6 +40,7 @@
             this.City = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Available = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Handicap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LVGolf
@@ -107,11 +108,22 @@
             // 
             this.Handicap.Text = "Handicap";
             // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(29, 445);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(151, 55);
+            this.btnCount.TabIndex = 1;
+            this.btnCount.Text = "How many Golfers?";
+            this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 502);
+            this.Controls.Add(this.btnCount);
             this.Controls.Add(this.LVGolf);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -134,6 +146,7 @@
         private System.Windows.Forms.ColumnHeader City;
         private System.Windows.Forms.ColumnHeader Available;
         private System.Windows.Forms.ColumnHeader Handicap;
+        private System.Windows.Forms.Button btnCount;
     }
 }
 
